@@ -1,0 +1,121 @@
+
+body{
+    background-image: url("background.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.heading{
+    color: white;
+    font: bold;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 55px;
+}
+
+.gameBoarding {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    width: 412px;
+    margin: 10px auto;
+    color: #afd407;
+    position: relative;
+}
+
+.cell:hover{
+    background-color:rgb(170, 235, 255);
+}
+
+.pattern{
+    animation-name:  blinking;
+    animation-duration: 1s;
+}
+
+.cell{
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(0, 0, 0, 0.959);
+    background-color: rgb(16, 239, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button{
+    align-items: center;
+    position: fixed;
+    left: 45%;
+    background-color: black;
+    color: aqua;
+    font-size: 25px;
+    padding: 0.25cm;
+    text-align:center;
+    border-radius: 20px;
+
+}
+
+.button:hover{
+    background-color:rgba(255, 255, 255, 0.938);
+}
+
+.Output{
+    font:italic;
+    color: antiquewhite;
+    text-align: center;
+    font-size: 30px;
+}
+
+.next.round{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: rgba(3, 3, 3, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:bisque;
+    font-size: 45px;
+    font-family: cursive;
+
+}
+
+
+@keyframes blinking{
+    from{ background-color:rgb(27, 148, 179) ;}
+    to{
+        background-color: rgb(16, 239, 255);
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .heading{
+        font-size: 30px;
+    }
+
+    .gameBoarding{
+        width: 210px;
+    }
+
+    .cell{
+        width:50px;
+        height: 50px;
+    }
+
+    .button{
+        font-size: 15px;
+        left: 40%
+    }
+
+    .Output{
+        font-size: 15px;
+    }
+
+    .next.round{
+        font-size: 25px;
+    }
+
+}
